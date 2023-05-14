@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="w-full flex flex-col justify-center items-center">
+        <div class="w-full p-10 flex flex-col justify-center items-center">
+            <h1 class="text-4xl">Register User</h1>
+            <form method="post" class="flex flex-col gap-8 py-10 items-end">
+                {% csrf_token %}
+                <div class="flex gap-4">
+                    <label for="Title">Username</label>
+                    <input type="text" name="username" class="border-2 rounded-md">
+                </div>
+                <div class="flex gap-4">
+                    <label for="Fav Character">Password</label>
+                    <input type="password" name="password" class="border-2 rounded-md">
+                </div>
+                <div class="flex gap-4">
+                    <label for="Rating">Confirm Password</label>
+                    <input type="password" name="conf_password" class="border-2 rounded-md">
+                </div>
+                <button type="submit" class="bg-black text-white p-2 px-4 rounded-md">Add</button>
+            </form>
+            <a href="/login">Login</a>
+        </div>
+        
+    </div>
+</body>
+</html>
